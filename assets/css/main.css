@@ -27,11 +27,6 @@ section, summary, time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-
 p8 {
     font-style: italic;        /* Makes the text italic */
     color: #f8d7da;            /* Sets the color to a very light red (hex code) */
