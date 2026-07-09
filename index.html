@@ -38,6 +38,31 @@
 					<!-- Logo -->
 						 <h1><a href="index.html" id="logo">Sapna Mishra, Astronomy</a></h1> 
 
+					         <footer>
+							    <p>© 2026 Your Name</p>
+							    <span id="last-updated">Loading...</span>
+							  </footer>
+							
+							  <script>
+							    const owner = "Sapna-1107";
+							    const repo = "Sapna-1107.github.io";
+							    const filePath = "index.html";
+							
+							    fetch(`https://api.github.com/repos/${owner}/${repo}/commits?path=${filePath}&page=1&per_page=1`)
+							      .then(res => res.json())
+							      .then(data => {
+							        const date = new Date(data[0].commit.committer.date);
+							        document.getElementById("last-updated").textContent =
+							          "Last updated: " + date.toLocaleDateString("en-US", {
+							            year: "numeric", month: "long", day: "numeric"
+							          });
+							      })
+							      .catch(() => {
+							        document.getElementById("last-updated").textContent = "";
+							      });
+
+
+	  
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
